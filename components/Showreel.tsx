@@ -64,7 +64,7 @@ export default function Showreel() {
                   <div className="text-center mb-10">
                     <div className="text-white/30 text-xs tracking-widest uppercase font-mono mb-3">2024 Showreel</div>
                     <div className="font-display font-black text-3xl md:text-5xl text-white">
-                      Alex Reeves
+                      FLow Edits
                     </div>
                   </div>
 
@@ -98,7 +98,7 @@ export default function Showreel() {
             ) : (
               <iframe
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
-                title="Alex Reeves Showreel"
+                title="FLow Edits Showreel"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"

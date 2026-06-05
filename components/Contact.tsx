@@ -124,7 +124,7 @@ export default function Contact() {
           className="mt-20 pt-10 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="font-display font-bold text-white/20 text-sm tracking-wide">
-            © 2026 Alex Reeves. All rights reserved.
+            © 2026 Ayush Priyam. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <span className="text-white/20 text-sm">Made with</span>

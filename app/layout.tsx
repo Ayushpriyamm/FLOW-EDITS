@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, Space_Grotesk } from 'next/font/google'
+// @ts-ignore: side-effect import of CSS without type declarations
 import './globals.css'
 
 const syne = Syne({
@@ -15,11 +16,11 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Alex Reeves — Video Editor',
+  title: 'FLow Edits — Video Editor',
   description: 'Award-winning video editor specializing in cinematic storytelling, short-form content, and commercial productions.',
   keywords: ['video editor', 'cinematic', 'short form content', 'youtube editor', 'motion graphics'],
   openGraph: {
-    title: 'Alex Reeves — Video Editor',
+    title: 'FLow Edits — Video Editor',
     description: 'Cinematic storytelling through expert video editing.',
     type: 'website',
   },

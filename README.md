@@ -1,4 +1,4 @@
-# 🎬 Alex Reeves — Video Editor Portfolio
+# 🎬 FLow Edits — Video Editor Portfolio
 
 A cinematic, Gen-Z styled portfolio website for a professional video editor.
 Built with Next.js 14, Tailwind CSS, and Framer Motion.
