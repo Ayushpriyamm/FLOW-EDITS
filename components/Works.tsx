@@ -22,6 +22,24 @@ function getCategoryStyle(category: string): string {
   return CATEGORY_COLORS[category] || 'bg-white/10 text-white/60 border-white/10'
 }
 
+function getEmbedUrl(url: string): string {
+  try {
+    if (url.includes('/shorts/')) {
+      const id = url.split('/shorts/')[1].split('?')[0]
+      return `https://www.youtube.com/embed/${id}`
+    }
+
+    if (url.includes('watch?v=')) {
+      const id = new URL(url).searchParams.get('v')
+      return `https://www.youtube.com/embed/${id}`
+    }
+
+    return url
+  } catch {
+    return url
+  }
+}
+
 function VideoModal({ item, onClose }: { item: PortfolioItem; onClose: () => void }) {
   return (
     <motion.div
@@ -59,7 +77,7 @@ function VideoModal({ item, onClose }: { item: PortfolioItem; onClose: () => voi
           </div>
           <div className="aspect-video">
             <iframe
-              src={`${item.videoUrl}?autoplay=1&rel=0`}
+              src={`${getEmbedUrl(item.videoUrl)}?autoplay=1&rel=0`}
               title={item.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

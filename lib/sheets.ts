@@ -25,6 +25,8 @@ export interface PortfolioItem {
 const SHEET_ID = process.env.GOOGLE_SHEET_ID || 'YOUR_GOOGLE_SHEET_ID'
 const SHEET_NAME = process.env.GOOGLE_SHEET_NAME || 'Sheet1'
 
+console.log("Sheet ID is",SHEET_ID)
+
 // This URL uses Google Sheets' public CSV export — no API key needed!
 const SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}`
 
@@ -67,6 +69,7 @@ function parseCSV(csvText: string): string[][] {
 
 export async function getPortfolioItems(): Promise<PortfolioItem[]> {
   try {
+    console.log("SHEET_ID:", SHEET_ID)
     // If no Sheet ID is configured, return demo data
     if (SHEET_ID === 'YOUR_GOOGLE_SHEET_ID') {
       return getDemoData()
